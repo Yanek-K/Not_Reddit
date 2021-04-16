@@ -1,0 +1,99 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #294b7a;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #2f404c;
+}
+
+.NavBar__left {
+  display: flex;
+}
+
+.NavBar__logo {
+  width: 110px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.NavBar__center {
+  display: flex;
+  width: 29%;
+  border: 1.5px solid #294b7a;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.NavBar__center > input {
+  margin: 0px 10px;
+  width: 50%;
+  flex: 1;
+  border: none;
+  background-color: white;
+  text-align: center;
+}
+
+::placeholder {
+  color: #393937;
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+.NavBar__right {
+  display: flex;
+  cursor: pointer;
+}
+
+.NavBar__homeIcon {
+  padding-right: 15px;
+}
+
+.NavBar__trendingIcon {
+  padding-right: 15px;
+}
+
+@media only screen and (min-width: 700px) {
+  .NavBar {
+    justify-content: space-around;
+  }
+
+  .NavBar__left {
+    padding: 0px 10px;
+  }
+
+  .NavBar__logo {
+    width: 140px;
+  }
+
+  .NavBar__center {
+    width: 30%;
+    margin-left: 0vh;
+  }
+
+  .NavBar__right {
+    display: flex;
+  }
+
+  .NavBar__homeIcon {
+    padding-right: 40px;
+  }
+
+  .NavBar__trendingIcon {
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .NavBar__center {
+    width: 25%;
+  }
+  .NavBar__logo {
+    width: 170px;
+  }
+}

@@ -12,7 +12,6 @@ export const searchReducer = (state = initialState, action) => {
     case SEARCH_SUCCESS:
       return {
         ...state,
-        text: action.payload.text,
         posts: action.payload.posts,
         about: action.payload.about,
         loading: false,

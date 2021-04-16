@@ -1,12 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 //MUI
 import Grid from "@material-ui/core/Grid";
 
+//Redux
+import { getSearch } from "../../redux/actions/searchActions";
+
+//Components
+import Feed from "./../../components/Feed/index";
+import TopCommunities from "./../../components/TopCommunities";
+import SubredditInfo from "../../components/SubredditInfo";
+
+const mapState = (state) => ({
+  posts: state.search,
+  loading: state.search,
+});
+
 const Home = () => {
+  const dispatch = useDispatch();
+  const { posts, loading } = useSelector(mapState);
+
+  useEffect(() => {
+    dispatch(getSearch("art"));
+  }, [dispatch]);
+
   return (
     <div>
-      <p>Home</p>
+      <Grid container spacing={4}>
+        <Grid item md={12} sm={12} xs={1}>
+          <SubredditInfo />
+        </Grid>
+        <Grid item md={8} sm={8} xs={1}>
+          <Feed posts={posts} loading={loading} />
+        </Grid>
+        <Grid item md={4} sm={4} xs={1}>
+          <TopCommunities />
+        </Grid>
+      </Grid>
     </div>
   );
 };

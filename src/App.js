@@ -1,6 +1,5 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import axios from "axios";
 
 //Components
 import Navbar from "./components/Navbar";

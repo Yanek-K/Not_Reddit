@@ -1,0 +1,10 @@
+.feed {
+  display: flex;
+  height: auto;
+  background-color: black;
+}
+.feed__searchIcon {
+  width: 23px;
+  height: auto;
+  border-radius: 50%;
+}
