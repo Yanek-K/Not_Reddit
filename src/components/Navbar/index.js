@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   const handlePopular = (e) => {
-    dispatch(getSearch("popular"));
+    dispatch(getSearch("askreddit"));
     history.push("/");
   };
   return (
@@ -65,7 +65,7 @@ const Navbar = () => {
             onClick={handleTrending}
           />
         </Tooltip>
-        <Tooltip title="Popular" placement="top">
+        <Tooltip title="Ask Reddit" placement="top">
           <EqualizerTwoToneIcon
             className="NavBar__EqualizerIcon"
             style={{ fill: "#fff" }}

@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { getSearch } from "../../redux/actions/searchActions";
 import moment from "moment";
+import { postAction } from "../../redux/actions/postActions";
 
 const mapState = (state) => ({
   about: state.search.about,
@@ -20,8 +21,23 @@ const mapState = (state) => ({
 const Posts = ({ post }) => {
   const { about } = useSelector(mapState);
   const time = new Date(0).setUTCSeconds(post.data.created_utc);
+  const history = useHistory();
+  const [subreddit, setSubreddit] = useState("");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (subreddit) {
+      dispatch(postAction(subreddit));
+      history.push("/post");
+    }
+    return () => {
+      setSubreddit("");
+      // dispatch(postAction(""));
+    };
+  }, [dispatch, subreddit]);
+
   return (
-    <div className="feed">
+    <div className="feed" onClick={() => setSubreddit(post.data.permalink)}>
       <div className="feed__center">
         <div className="feed__center__header">
           {about.data.icon_img ? (
@@ -31,7 +47,7 @@ const Posts = ({ post }) => {
               alt="icon"
             />
           ) : (
-            <EcoIcon style={{ fill: "#457b9dff" }} />
+            <EcoIcon style={{ fill: "#7f79c0" }} />
           )}
           <p className="feed__author">Posted by {post.data.author}</p>
         </div>
@@ -45,13 +61,15 @@ const Posts = ({ post }) => {
         </div>
         <div className="feed__media">
           {post.data.is_video ? (
-            <ReactPlayer
-              controls={true}
-              width="100%"
-              height="100%"
-              volume="1"
-              url={post.data.media.reddit_video.fallback_url}
-            />
+            <div className="feed__video">
+              <ReactPlayer
+                controls={true}
+                width="100%"
+                height="100%"
+                volume="1"
+                url={post.data.media.reddit_video.fallback_url}
+              />
+            </div>
           ) : (
             <img
               className={
@@ -72,20 +90,20 @@ const Posts = ({ post }) => {
           <div className="feed__footer__item">
             <ChatBubbleIcon
               color="action"
-              style={{ fontSize: 15, color: "#9ad7d8" }}
+              style={{ fontSize: 15, color: "#7f79c0" }}
             />
             <p className="feed__footer__text">
               {post.data.num_comments} Comments
             </p>
           </div>
           <div className="feed__footer__item">
-            <ThumbUpAltIcon style={{ fontSize: 15, color: "#9ad7d8" }} />
+            <ThumbUpAltIcon style={{ fontSize: 15, color: "#7f79c0" }} />
             <p className="feed__footer__text">{post.data.ups}</p>
           </div>
           <div className="feed__footer__item">
             <BorderColorIcon
               color="action"
-              style={{ fontSize: 15, color: "#9ad7d8" }}
+              style={{ fontSize: 15, color: "#7f79c0" }}
             />{" "}
             <p className="feed__footer__text">{moment(time).fromNow()}</p>
           </div>

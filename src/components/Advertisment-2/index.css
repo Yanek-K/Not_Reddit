@@ -1,0 +1,27 @@
+.ad2 {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.ad2__header {
+  display: flex;
+  color: black;
+  margin: 0.3rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.ad2__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.3rem;
+}
+
+.ad2__img {
+  width: 100%;
+  height: auto;
+}

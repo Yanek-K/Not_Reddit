@@ -1,11 +1,13 @@
 .card {
-  /* display: flex; */
-  box-shadow: 1px 2px 2px 1px #888888;
-  margin: 1.5rem auto 0.5rem;
-  width: 50%;
-  border-radius: 1rem;
-  background-color: #8387aa;
+  display: flex;
+  margin: 2rem auto 0rem;
+  width: 100%;
+  background-color: #56b7db;
+  /* border-radius: 25px; */
   color: white;
+  align-items: flex-end;
+  height: 7rem;
+  justify-content: center;
 }
 .content {
   display: flex;

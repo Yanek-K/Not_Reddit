@@ -7,12 +7,14 @@ import Navbar from "./components/Navbar";
 //Pages
 import Home from "./pages/Home";
 import PostInfo from "./pages/PostInfo";
+import SubredditInfo from "./components/SubredditInfo";
 
 function App() {
   return (
     <div className="App">
       <div className="Nav">
         <Navbar />
+        <SubredditInfo />
       </div>
       <div className="Main">
         <Switch>

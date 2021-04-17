@@ -16,12 +16,11 @@ import moment from "moment";
 import Post from "./../Posts";
 
 const mapState = (state) => ({
-  about: state.search.about,
   posts: state.search.posts,
 });
 
 const Feed = ({}) => {
-  const { posts, about } = useSelector(mapState);
+  const { posts } = useSelector(mapState);
 
   return (
     <div>

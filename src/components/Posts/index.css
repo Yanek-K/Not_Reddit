@@ -3,12 +3,11 @@
   height: auto;
   border-radius: 25px;
   position: relative;
-  box-shadow: 1px 2px 2px 2px #2f404c;
+  box-shadow: 2px 2px 2px 2px;
   cursor: pointer;
-  margin: 0rem 10rem 3rem;
-  max-width: 1550px;
-  /* width: 60%; */
-  /* background-color: #2f404c; */
+  margin: 3rem 10rem 3rem 8rem;
+  background-color: white;
+  color: black;
 }
 
 .feed__center {
@@ -18,12 +17,12 @@
 
 .feed__center__header {
   display: flex;
-  margin: 0.6rem 1rem 1rem;
+  margin: 0.6rem 1.3rem 1rem;
   /* justify-content: center; */
 }
 
 .feed__content {
-  margin: 0 1rem 0.5rem;
+  margin: 0 1.3rem 0.5rem;
   font-size: 1.2rem;
   /* text-align: center; */
 }
@@ -43,20 +42,31 @@
   padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
   font-size: 0.85rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .showMoreText {
   text-decoration: none;
-  color: #9ad7d8;
-  margin: 1rem auto;
+  color: #2f404c;
+  margin: 1.2rem auto;
   font-weight: 500;
 }
 
 .feed__media {
   display: flex;
   /* width: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.feed__video {
+  /* display: flex; */
+  justify-content: center;
+  width: 25rem;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
@@ -98,7 +108,7 @@
 
 @media only screen and (max-width: 1200px) {
   .feed {
-    margin: 0rem 7rem 3rem;
+    margin: 2rem 5rem 3rem 6rem;
   }
   .feed__image {
     width: 20rem;
@@ -111,6 +121,6 @@
 
 @media only screen and (max-width: 900px) {
   .feed {
-    margin: 0rem 2rem 3rem;
+    margin: 2rem 3rem 3rem 5rem;
   }
 }

@@ -12,6 +12,7 @@ import { getSearch } from "../../redux/actions/searchActions";
 import Feed from "./../../components/Feed/index";
 import TopCommunities from "./../../components/TopCommunities";
 import SubredditInfo from "../../components/SubredditInfo";
+import Sidebar from "../../components/Sidebar";
 
 const mapState = (state) => ({
   posts: state.search,
@@ -23,20 +24,17 @@ const Home = () => {
   const { posts, loading } = useSelector(mapState);
 
   useEffect(() => {
-    dispatch(getSearch("art"));
+    dispatch(getSearch("funny"));
   }, [dispatch]);
 
   return (
     <div className="container">
-      <Grid container spacing={4}>
-        <Grid item md={12} sm={12} xs={12}>
-          <SubredditInfo />
-        </Grid>
+      <Grid container spacing={0}>
         <Grid item md={8} sm={8} xs={12}>
           <Feed posts={posts} loading={loading} />
         </Grid>
         <Grid item md={4} sm={4} xs={12}>
-          <TopCommunities />
+          <Sidebar />
         </Grid>
       </Grid>
     </div>

@@ -1,0 +1,31 @@
+.about {
+  margin: 3rem 0rem 2rem 0;
+  height: auto;
+  box-shadow: 2px 2px 2px 2px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.about__header {
+  display: flex;
+  text-align: center;
+  margin: 0rem 0 0.2rem;
+  padding-bottom: 13px;
+  height: 50px;
+  color: white;
+  border-bottom: 2px solid;
+  background-color: #945ab3;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 25px 25px 0 0;
+  font-size: 1.4rem;
+}
+
+.about__main {
+  list-style-type: none;
+  /* text-align: center; */
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6rem;
+}

@@ -1,0 +1,6 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+}

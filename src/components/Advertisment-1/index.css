@@ -1,0 +1,25 @@
+.ad1 {
+  margin: 2rem 1rem;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.ad1__header {
+  display: flex;
+  color: black;
+  margin: 0.3rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.ad1__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.3rem;
+}
+
+.ad1__img {
+  width: 100%;
+  height: auto;
+}

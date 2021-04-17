@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 2px solid #294b7a;
+  /* border-bottom: 2px solid #294b7a; */
   padding-top: 18px;
   padding-bottom: 10px;
   padding-right: 10px;
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #2f404c;
+  background-color: #211837;
 }
 
 .NavBar__left {
