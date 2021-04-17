@@ -1,10 +1,10 @@
 .card {
   /* display: flex; */
   box-shadow: 1px 2px 2px 1px #888888;
-  margin: 2rem auto 1rem;
+  margin: 1.5rem auto 0.5rem;
   width: 50%;
   border-radius: 1rem;
-  background-color: #2f404c;
+  background-color: #8387aa;
   color: white;
 }
 .content {

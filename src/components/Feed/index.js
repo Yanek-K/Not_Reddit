@@ -25,7 +25,7 @@ const Feed = ({}) => {
 
   return (
     <div>
-      {posts ? (
+      {posts.data ? (
         posts.data.children.map((post) => (
           <Post post={post} key={post.postId} />
         ))

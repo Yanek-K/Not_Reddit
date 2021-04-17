@@ -3,3 +3,8 @@
   padding: 0;
   text-decoration: none;
 }
+
+.Main {
+  max-width: 1400px;
+  margin: 0px auto 0 auto;
+}

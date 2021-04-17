@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "./index.css";
 
 //MUI
 import Grid from "@material-ui/core/Grid";
@@ -26,15 +27,15 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="container">
       <Grid container spacing={4}>
-        <Grid item md={12} sm={12} xs={1}>
+        <Grid item md={12} sm={12} xs={12}>
           <SubredditInfo />
         </Grid>
-        <Grid item md={8} sm={8} xs={1}>
+        <Grid item md={8} sm={8} xs={12}>
           <Feed posts={posts} loading={loading} />
         </Grid>
-        <Grid item md={4} sm={4} xs={1}>
+        <Grid item md={4} sm={4} xs={12}>
           <TopCommunities />
         </Grid>
       </Grid>

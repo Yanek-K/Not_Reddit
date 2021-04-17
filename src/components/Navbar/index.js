@@ -8,6 +8,7 @@ import { getSearch } from "../../redux/actions/searchActions";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,18 +54,24 @@ const Navbar = () => {
       </div>
       <div className="NavBar__right">
         <Link to="/">
-          <HomeIcon className="NavBar__homeIcon" style={{ fill: "#fff" }} />
+          <Tooltip title="Home" placement="top">
+            <HomeIcon className="NavBar__homeIcon" style={{ fill: "#fff" }} />
+          </Tooltip>
         </Link>
-        <TrendingUpTwoToneIcon
-          className="NavBar__trendingIcon"
-          style={{ fill: "#fff" }}
-          onClick={handleTrending}
-        />
-        <EqualizerTwoToneIcon
-          className="NavBar__EqualizerIcon"
-          style={{ fill: "#fff" }}
-          onClick={handlePopular}
-        />
+        <Tooltip title="Trending" placement="top">
+          <TrendingUpTwoToneIcon
+            className="NavBar__trendingIcon"
+            style={{ fill: "#fff" }}
+            onClick={handleTrending}
+          />
+        </Tooltip>
+        <Tooltip title="Popular" placement="top">
+          <EqualizerTwoToneIcon
+            className="NavBar__EqualizerIcon"
+            style={{ fill: "#fff" }}
+            onClick={handlePopular}
+          />
+        </Tooltip>
       </div>
     </div>
   );
