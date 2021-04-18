@@ -1,7 +1,5 @@
 .communities {
-  margin: 3rem 0rem;
-  /* border: 1px solid black; */
-  /* border-radius: 25px; */
+  margin: 3rem 0rem 1rem;
   box-shadow: 2px 2px 2px 2px;
   border-radius: 25px;
   background-color: white;
@@ -49,4 +47,32 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .communities {
+    margin: 3rem -1rem 0 1rem;
+  }
+  .communities__main {
+    align-items: center;
+  }
+  .communities__main > li {
+    flex-direction: column;
+    align-items: center;
+  }
+  .communities__main > li > p {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .communities {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .communities {
+    width: 90%;
+  }
 }

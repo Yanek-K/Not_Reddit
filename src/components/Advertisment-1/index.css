@@ -23,3 +23,15 @@
   width: 100%;
   height: auto;
 }
+
+@media only screen and (max-width: 900px) {
+  .ad1 {
+    margin: 3rem 0rem 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .ad1 {
+    width: 80%;
+    margin: 3rem 3rem;
+  }
+}

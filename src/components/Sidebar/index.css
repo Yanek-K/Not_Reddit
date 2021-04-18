@@ -4,3 +4,10 @@
   height: auto;
   width: 80%;
 }
+
+@media only screen and (max-width: 599px) {
+  .sidebar {
+    width: 80%;
+    margin: 0 3rem;
+  }
+}

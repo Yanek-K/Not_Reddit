@@ -5,7 +5,7 @@
   position: relative;
   box-shadow: 2px 2px 2px 2px;
   cursor: pointer;
-  margin: 3rem 10rem 3rem 8rem;
+  margin: 3rem 6rem 3rem 10rem;
   background-color: white;
   color: black;
 }
@@ -108,7 +108,7 @@
 
 @media only screen and (max-width: 1200px) {
   .feed {
-    margin: 2rem 5rem 3rem 6rem;
+    margin: 3rem 5rem 3rem 6rem;
   }
   .feed__image {
     width: 20rem;
@@ -121,6 +121,12 @@
 
 @media only screen and (max-width: 900px) {
   .feed {
-    margin: 2rem 3rem 3rem 5rem;
+    margin: 3rem 2rem 3rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .feed {
+    margin: 3rem 1rem;
   }
 }
