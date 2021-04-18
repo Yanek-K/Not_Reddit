@@ -1,5 +1,7 @@
 import React from "react";
 import "./index.css";
+
+//Redux
 import { useSelector } from "react-redux";
 
 const mapState = (state) => ({

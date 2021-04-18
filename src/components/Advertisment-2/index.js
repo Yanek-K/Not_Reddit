@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 
+//Assets
 import SmallTalk from "./../../assets/Ad2.png";
 
 const Advertisement2 = () => {

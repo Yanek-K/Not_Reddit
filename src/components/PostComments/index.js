@@ -1,9 +1,11 @@
 import React from "react";
 import "./index.css";
 import moment from "moment";
+import ShowMoreText from "react-show-more-text";
+
+//MUI
 import BorderColorIcon from "@material-ui/icons/BorderColor";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
-import ShowMoreText from "react-show-more-text";
 
 const PostComments = ({ comment }) => {
   const time = new Date(0).setUTCSeconds(comment.created_utc);

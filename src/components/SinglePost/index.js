@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import moment from "moment";
 import "./index.css";
 
+//MUI
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import BorderColorIcon from "@material-ui/icons/BorderColor";
 
-import moment from "moment";
-import PostComments from "../PostComments";
+//Redux
+import { useDispatch, useSelector } from "react-redux";
 import { postAction } from "../../redux/actions/postActions";
+
+//Components
+import PostComments from "../PostComments";
 import PostSkeleton from "../../util/PostSkeleton/index";
 
 import ReactPlayer from "react-player";

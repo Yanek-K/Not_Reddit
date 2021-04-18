@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 
+//Assets
 import Camera from "./../../assets/Ad1.png";
 
 const Advertisement1 = () => {

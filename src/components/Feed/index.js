@@ -1,7 +1,10 @@
 import React from "react";
 import "./index.css";
 
+//Redux
 import { useSelector } from "react-redux";
+
+//Components
 import Post from "./../Posts";
 import PostSkeleton from "./../../util/PostSkeleton";
 

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { getSearch } from "../../redux/actions/searchActions";
 import "./index.css";
+
+//Redux
+import { useDispatch } from "react-redux";
+import { getSearch } from "../../redux/actions/searchActions";
 
 const TopCommunities = () => {
   const [text, setText] = useState("");

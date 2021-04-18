@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import "./index.css";
+
+//MUI
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import TrendingUpTwoToneIcon from "@material-ui/icons/TrendingUpTwoTone";
 import EqualizerTwoToneIcon from "@material-ui/icons/EqualizerTwoTone";
+import Tooltip from "@material-ui/core/Tooltip";
+
+//Redux
 import { getSearch } from "../../redux/actions/searchActions";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+
+//Assets
 import Logo from "../../assets/Logo.png";
-import Tooltip from "@material-ui/core/Tooltip";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");

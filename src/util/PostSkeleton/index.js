@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 
+//MUI
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import BorderColorIcon from "@material-ui/icons/BorderColor";

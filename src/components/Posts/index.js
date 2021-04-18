@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
+import ReactPlayer from "react-player";
+import moment from "moment";
 
+//MUI
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import BorderColorIcon from "@material-ui/icons/BorderColor";
 import EcoIcon from "@material-ui/icons/Eco";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import ShowMoreText from "react-show-more-text";
 
-import ReactPlayer from "react-player";
+//Redux
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import moment from "moment";
 import { postAction } from "../../redux/actions/postActions";
 
 const mapState = (state) => ({
