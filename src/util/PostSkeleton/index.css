@@ -1,10 +1,12 @@
-.wrap {
+.wrap__Skeleton {
   margin: 1rem 6rem 1rem 0rem;
   display: flex;
   flex-direction: column;
 }
 
-.main {
+.main__Skeleton {
+  display: flex;
+  flex-direction: column;
   padding: 10px 20px;
   border-radius: 25px;
   width: 90%;
@@ -13,7 +15,7 @@
   background-color: white;
 }
 
-.header {
+.header__Skeleton {
   /* background-color: lightgray; */
   height: 5rem;
 

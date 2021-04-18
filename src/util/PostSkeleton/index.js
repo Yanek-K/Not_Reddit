@@ -7,8 +7,8 @@ import BorderColorIcon from "@material-ui/icons/BorderColor";
 
 const PostSkeleton = () => {
   const content = Array.from({ length: 10 }).map((item, index) => (
-    <div className="main">
-      <div className="header">
+    <div className="main__Skeleton">
+      <div className="header__Skeleton">
         <div className="header__author" />
         <div className="header__title" />
       </div>
@@ -26,7 +26,7 @@ const PostSkeleton = () => {
       </div>
     </div>
   ));
-  return <div className="wrap">{content}</div>;
+  return <div className="wrap__Skeleton">{content}</div>;
 };
 
 export default PostSkeleton;

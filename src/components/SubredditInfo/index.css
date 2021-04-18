@@ -3,7 +3,6 @@
   margin: 2rem auto 0rem;
   width: 100%;
   background-color: #56b7db;
-  /* border-radius: 25px; */
   color: white;
   align-items: flex-end;
   height: 7rem;
@@ -25,6 +24,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
+  justify-content: baseline;
 }
 
 h3 {

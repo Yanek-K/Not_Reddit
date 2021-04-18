@@ -21,6 +21,7 @@ const SubredditInfo = () => {
     <div className="card">
       {posts.data && about.data ? (
         <div className="content">
+          {/* <div className="subredditImg"> */}
           {about.data.icon_img !== "" ? (
             <img src={about.data.icon_img} className="subredditImg" />
           ) : about.data.header_img ? (
@@ -28,9 +29,10 @@ const SubredditInfo = () => {
           ) : (
             <EcoIcon style={{ fill: "#7f79c0" }} />
           )}
+          {/* </div> */}
           <div className="info">
             <h3>{about.data.title}</h3>
-            <p variant="body2">
+            <p>
               {about.data.display_name_prefixed} • {about.data.subscribers}{" "}
               Subscribers
             </p>

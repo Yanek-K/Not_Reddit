@@ -4,10 +4,10 @@ import "./index.css";
 const SubredditSkeleton = () => {
   return (
     <div className="wrap">
-      <div className="image" />
-      <div classname="content">
-        <div classname="title" />
-        <div classname="info" />
+      <div className="wrap__image" />
+      <div classname="wrap__content">
+        <div className="wrap__image2" />
+        <div className="wrap__image2" />
       </div>
     </div>
   );
