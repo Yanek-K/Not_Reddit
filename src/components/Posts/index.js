@@ -32,7 +32,6 @@ const Posts = ({ post }) => {
     }
     return () => {
       setSubreddit("");
-      // dispatch(postAction(""));
     };
   }, [dispatch, subreddit]);
 

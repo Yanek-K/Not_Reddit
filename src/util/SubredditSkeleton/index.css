@@ -1,0 +1,24 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.image {
+  height: 4.2rem;
+  width: 4.2rem;
+  background-color: lightgray;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+.title {
+  background-color: lightgray;
+  width: 50px;
+  height: 50px;
+}

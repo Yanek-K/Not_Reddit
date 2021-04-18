@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import EcoIcon from "@material-ui/icons/Eco";
+import SubredditSkeleton from "../../util/SubredditSkeleton";
 
 const mapState = (state) => ({
   posts: state.search.posts,
@@ -36,7 +37,7 @@ const SubredditInfo = () => {
           </div>
         </div>
       ) : (
-        <p>Loading</p>
+        <SubredditSkeleton />
       )}
     </div>
   );

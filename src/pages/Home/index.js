@@ -24,7 +24,13 @@ const Home = () => {
   const { posts, loading } = useSelector(mapState);
 
   useEffect(() => {
-    dispatch(getSearch("funny"));
+    if (posts.posts.length === 0) {
+      dispatch(getSearch("funny"));
+    }
+
+    // return () => {
+    //   dispatch(getSearch());
+    // };
   }, [dispatch]);
 
   return (

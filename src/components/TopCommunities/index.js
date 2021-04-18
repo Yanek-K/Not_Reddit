@@ -12,8 +12,8 @@ const TopCommunities = () => {
 
   useEffect(() => {
     if (text !== "") {
-      dispatch(getSearch(text));
       history.push("/");
+      dispatch(getSearch(text));
     }
   }, [dispatch, text]);
 

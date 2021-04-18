@@ -9,6 +9,8 @@ import BorderColorIcon from "@material-ui/icons/BorderColor";
 import moment from "moment";
 import PostComments from "../PostComments";
 import { getSearch } from "../../redux/actions/searchActions";
+import { postAction } from "../../redux/actions/postActions";
+import PostSkeleton from "../../util/PostSkeleton/index";
 
 const mapState = (state) => ({
   item: state.post.item,
@@ -32,46 +34,53 @@ const SinglePost = () => {
     return () => {
       setPostInfo("");
       setCommentInfo([]);
+      dispatch(postAction(""));
     };
   }, [item]);
 
-  return (
-    <div className="postPage">
-      <div className="post__info">
-        <div className="post__header">
-          <p>Author: {postInfo.author}</p>
-          <h4>{postInfo.title}</h4>
-        </div>
-        <div className="post__content">
-          {postInfo.isVideo ? (
-            ""
-          ) : (
-            <img src={postInfo.url} alt="" className="post__image" />
-          )}
-        </div>
-        <div className="post__footer">
-          <div className="post__footer__icon">
-            <ChatBubbleIcon style={{ fontSize: 15, color: "#7f79c0" }} />
-            <p>{postInfo.num_comments}</p>
+  if (loading) {
+    return <PostSkeleton />;
+  } else {
+    return (
+      <div className="postPage">
+        <div className="post__info">
+          <div className="post__header">
+            <p>Author: {postInfo.author}</p>
+            <h4>{postInfo.title}</h4>
           </div>
-          <div className="post__footer__icon">
-            <ThumbUpAltIcon style={{ fontSize: 15, color: "#7f79c0" }} />
-            <p>{postInfo.ups}</p>
+          <div className="post__content">
+            {postInfo.isVideo ? (
+              ""
+            ) : (
+              <img src={postInfo.url} alt="" className="post__image" />
+            )}
           </div>
-          <div className="post__footer__icon">
-            <BorderColorIcon style={{ fontSize: 15, color: "#7f79c0" }} />
+          <div className="post__footer">
+            <div className="post__footer__icon">
+              <ChatBubbleIcon style={{ fontSize: 15, color: "#7f79c0" }} />
+              <p>{postInfo.num_comments}</p>
+            </div>
+            <div className="post__footer__icon">
+              <ThumbUpAltIcon style={{ fontSize: 15, color: "#7f79c0" }} />
+              <p>{postInfo.ups}</p>
+            </div>
+            <div className="post__footer__icon">
+              <BorderColorIcon style={{ fontSize: 15, color: "#7f79c0" }} />
 
-            <p>{moment(time).fromNow()}</p>
+              <p>{moment(time).fromNow()}</p>
+            </div>
           </div>
         </div>
+        <div className="post__comments">
+          <p>Comments...</p>
+          {commentInfo &&
+            commentInfo.map((comment) => (
+              <PostComments comment={comment.data} />
+            ))}
+        </div>
       </div>
-      <div className="post__comments">
-        <p>Comments...</p>
-        {commentInfo &&
-          commentInfo.map((comment) => <PostComments comment={comment.data} />)}
-      </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default SinglePost;

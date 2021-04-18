@@ -41,6 +41,13 @@
   justify-content: space-around;
   margin-top: 0.5rem;
 }
+.post__footer__icon {
+  display: flex;
+  align-items: baseline;
+}
+.post__footer__icon > p {
+  padding-left: 1rem;
+}
 
 .post__comments {
   width: 90%;

@@ -14,6 +14,7 @@ import { getSearch } from "../../redux/actions/searchActions";
 import moment from "moment";
 
 import Post from "./../Posts";
+import PostSkeleton from "./../../util/PostSkeleton";
 
 const mapState = (state) => ({
   posts: state.search.posts,
@@ -29,7 +30,7 @@ const Feed = ({}) => {
           <Post post={post} key={post.postId} />
         ))
       ) : (
-        <p>Loading</p>
+        <PostSkeleton />
       )}
     </div>
   );
