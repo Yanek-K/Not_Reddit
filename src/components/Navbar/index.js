@@ -35,6 +35,13 @@ const Navbar = () => {
     dispatch(getSearch("askreddit"));
     history.push("/");
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      dispatch(getSearch(searchTerm));
+      history.push("/");
+    }
+  };
   return (
     <div className="NavBar">
       <div className="NavBar__left">
@@ -45,11 +52,12 @@ const Navbar = () => {
 
       <div className="NavBar__center">
         <input
-          // value={value}
           type="text"
           placeholder="Search"
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         ></input>
+
         <SearchIcon onClick={handleClick} />
       </div>
       <div className="NavBar__right">

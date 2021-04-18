@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import PostInfo from "./pages/PostInfo";
 import SubredditInfo from "./components/SubredditInfo";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/post" component={PostInfo} />
         </Switch>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

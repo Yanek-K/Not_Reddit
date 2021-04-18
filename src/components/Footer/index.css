@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  height: 100px;
+  background-color: #211837;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.footer__text {
+  color: white;
+  position: absolute;
+  align-self: flex-end;
+  right: 1%;
+  margin: 1rem;
+}

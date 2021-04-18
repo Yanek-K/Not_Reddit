@@ -12,6 +12,8 @@ import { getSearch } from "../../redux/actions/searchActions";
 import { postAction } from "../../redux/actions/postActions";
 import PostSkeleton from "../../util/PostSkeleton/index";
 
+import ReactPlayer from "react-player";
+
 const mapState = (state) => ({
   item: state.post.item,
   loading: state.post.loading,
@@ -49,12 +51,19 @@ const SinglePost = () => {
             <h4>{postInfo.title}</h4>
           </div>
           <div className="post__content">
-            {postInfo.isVideo ? (
-              ""
+            {postInfo.is_video ? (
+              <ReactPlayer
+                controls={true}
+                width="100%"
+                height="100%"
+                volume="1"
+                url={postInfo.media.reddit_video.fallback_url}
+              />
             ) : (
               <img src={postInfo.url} alt="" className="post__image" />
             )}
           </div>
+
           <div className="post__footer">
             <div className="post__footer__icon">
               <ChatBubbleIcon style={{ fontSize: 15, color: "#7f79c0" }} />

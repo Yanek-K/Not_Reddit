@@ -60,5 +60,6 @@
 
 .Comment__body {
   /* padding-bottom: 30px; */
-  margin: 1rem;
+  margin: 0.7rem 1rem;
+  line-height: 1.4rem;
 }

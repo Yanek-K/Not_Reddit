@@ -19,17 +19,26 @@
 
 .post__header > p {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .post__header > h4 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  width: 90%;
+  margin: 0 auto 0.4rem;
 }
-
+.post__content {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
 .post__image {
   align-self: center;
-  width: 70%;
+  width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: 100px;
@@ -39,7 +48,7 @@
 .post__footer {
   display: flex;
   justify-content: space-around;
-  margin-top: 0.5rem;
+  margin-top: 0rem;
 }
 .post__footer__icon {
   display: flex;
@@ -68,6 +77,9 @@
 @media only screen and (max-width: 1200px) {
   .postPage {
     margin: 3rem 5rem 3rem 6rem;
+  }
+  .post__content {
+    width: 20rem;
   }
 }
 

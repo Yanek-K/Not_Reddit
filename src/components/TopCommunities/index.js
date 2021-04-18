@@ -22,7 +22,7 @@ const TopCommunities = () => {
       <div className="communities__header">
         <h4>Recommended Communities</h4>
       </div>
-      <div className="communities__content">
+      <div>
         <ul className="communities__main">
           <li>
             Travel
