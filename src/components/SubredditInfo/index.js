@@ -3,10 +3,6 @@ import { useSelector } from "react-redux";
 import "./index.css";
 
 //MUI
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
 import EcoIcon from "@material-ui/icons/Eco";
 import SubredditSkeleton from "../../util/SubredditSkeleton";
 
@@ -23,13 +19,16 @@ const SubredditInfo = () => {
         <div className="content">
           {/* <div className="subredditImg"> */}
           {about.data.icon_img !== "" ? (
-            <img src={about.data.icon_img} className="subredditImg" />
+            <img
+              src={about.data.icon_img}
+              className="subredditImg"
+              alt="Icon"
+            />
           ) : about.data.header_img ? (
-            <img src={about.data.header_img} />
+            <img src={about.data.header_img} alt="icon" />
           ) : (
             <EcoIcon style={{ fill: "#7f79c0" }} />
           )}
-          {/* </div> */}
           <div className="info">
             <h3>{about.data.title}</h3>
             <p>

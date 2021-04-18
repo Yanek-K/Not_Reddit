@@ -1,5 +1,4 @@
 import { SEARCH_SUCCESS, SEARCH_FAIL, SEARCH_REQUEST } from "../types";
-import axios from "axios";
 
 export const getSearch = (text) => async (dispatch) => {
   try {

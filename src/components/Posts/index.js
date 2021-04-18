@@ -9,8 +9,7 @@ import ShowMoreText from "react-show-more-text";
 
 import ReactPlayer from "react-player";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
-import { getSearch } from "../../redux/actions/searchActions";
+import { useHistory } from "react-router-dom";
 import moment from "moment";
 import { postAction } from "../../redux/actions/postActions";
 
@@ -33,7 +32,7 @@ const Posts = ({ post }) => {
     return () => {
       setSubreddit("");
     };
-  }, [dispatch, subreddit]);
+  }, [dispatch, subreddit, history]);
 
   return (
     <div className="feed" onClick={() => setSubreddit(post.data.permalink)}>
@@ -65,7 +64,6 @@ const Posts = ({ post }) => {
                 controls={true}
                 width="100%"
                 height="100%"
-                volume="1"
                 url={post.data.media.reddit_video.fallback_url}
               />
             </div>

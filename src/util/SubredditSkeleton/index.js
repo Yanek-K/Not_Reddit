@@ -5,7 +5,7 @@ const SubredditSkeleton = () => {
   return (
     <div className="wrap">
       <div className="wrap__image" />
-      <div classname="wrap__content">
+      <div className="wrap__content">
         <div className="wrap__image2" />
         <div className="wrap__image2" />
       </div>

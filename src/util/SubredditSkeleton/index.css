@@ -14,8 +14,6 @@
 .wrap__content {
   display: flex;
   flex-direction: column;
-  /* align-items: baseline; */
-  /* justify-content: baseline; */
 }
 
 .wrap__image2 {

@@ -10,8 +10,6 @@ import { getSearch } from "../../redux/actions/searchActions";
 
 //Components
 import Feed from "./../../components/Feed/index";
-import TopCommunities from "./../../components/TopCommunities";
-import SubredditInfo from "../../components/SubredditInfo";
 import Sidebar from "../../components/Sidebar";
 
 const mapState = (state) => ({
@@ -27,11 +25,7 @@ const Home = () => {
     if (posts.posts.length === 0) {
       dispatch(getSearch("funny"));
     }
-
-    // return () => {
-    //   dispatch(getSearch());
-    // };
-  }, [dispatch]);
+  }, [dispatch, posts.posts.length]);
 
   return (
     <div className="container">

@@ -7,7 +7,7 @@ import BorderColorIcon from "@material-ui/icons/BorderColor";
 
 const PostSkeleton = () => {
   const content = Array.from({ length: 10 }).map((item, index) => (
-    <div className="main__Skeleton">
+    <div className="main__Skeleton" key={index}>
       <div className="header__Skeleton">
         <div className="header__author" />
         <div className="header__title" />

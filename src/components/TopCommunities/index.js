@@ -1,4 +1,3 @@
-import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -15,7 +14,7 @@ const TopCommunities = () => {
       history.push("/");
       dispatch(getSearch(text));
     }
-  }, [dispatch, text]);
+  }, [dispatch, text, history]);
 
   return (
     <div className="communities">

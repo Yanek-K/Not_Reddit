@@ -8,7 +8,6 @@ import BorderColorIcon from "@material-ui/icons/BorderColor";
 
 import moment from "moment";
 import PostComments from "../PostComments";
-import { getSearch } from "../../redux/actions/searchActions";
 import { postAction } from "../../redux/actions/postActions";
 import PostSkeleton from "../../util/PostSkeleton/index";
 
@@ -38,7 +37,7 @@ const SinglePost = () => {
       setCommentInfo([]);
       dispatch(postAction(""));
     };
-  }, [item]);
+  }, [commentInfo, dispatch, postInfo, item]);
 
   if (loading) {
     return <PostSkeleton />;
